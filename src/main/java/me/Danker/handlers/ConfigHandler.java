@@ -522,11 +522,8 @@ public class ConfigHandler {
 		PetColours.PET_90_TO_99 = initInt("colors", "pet90To99", 0x9E794E); // Brown
 		PetColours.PET_100 = initInt("colors", "pet100", 0xF2D249); // Gold
 		UltrasequencerSolver.ULTRASEQUENCER_NEXT = initInt("colors", "ultrasequencerNext", 0x40FF40);
-		UltrasequencerSolver.ULTRASEQUENCER_NEXT_TO_NEXT = initInt("colors", "ultrasequencerNextToNext", 0x40DAE6);
 		ChronomatronSolver.CHRONOMATRON_NEXT = initInt("colors", "chronomatronNext", 0x40FF40);
-		ChronomatronSolver.CHRONOMATRON_NEXT_TO_NEXT = initInt("colors", "chronomatronNextToNext", 0x40DAE6);
 		ClickInOrderSolver.CLICK_IN_ORDER_NEXT = initInt("colors", "clickInOrderNext", 0xFF00DD);
-		ClickInOrderSolver.CLICK_IN_ORDER_NEXT_TO_NEXT = initInt("colors", "clickInOrderNextToNext", 0x0BEFE7);
 		BoulderSolver.BOULDER_COLOUR = initInt("colors", "boulder", 0x197F19);
 		BoulderSolver.BOULDER_ARROW_COLOUR = initInt("colors", "boulderArrow", 0x006000);
 		SilverfishSolver.SILVERFISH_LINE_COLOUR = initInt("colors", "silverfishLine", 0x40FF40);

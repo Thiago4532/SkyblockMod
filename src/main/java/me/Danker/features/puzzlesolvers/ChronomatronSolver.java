@@ -25,7 +25,6 @@ public class ChronomatronSolver {
     static List<String> chronomatronPattern = new ArrayList<>();
     static int chronomatronMouseClicks = 0;
     public static int CHRONOMATRON_NEXT;
-    public static int CHRONOMATRON_NEXT_TO_NEXT;
 
     @SubscribeEvent
     public void onSlotClick(ChestSlotClickedEvent event) {
@@ -74,8 +73,6 @@ public class ChronomatronSolver {
                                     }
                                 } else if (glass.getDisplayName().equals(chronomatronPattern.get(chronomatronMouseClicks))) {
                                     Utils.drawOnSlot(chestSize, glassSlot.xDisplayPosition, glassSlot.yDisplayPosition, CHRONOMATRON_NEXT + 0xE5000000);
-                                } else if (glass.getDisplayName().equals(chronomatronPattern.get(chronomatronMouseClicks + 1))) {
-                                    Utils.drawOnSlot(chestSize, glassSlot.xDisplayPosition, glassSlot.yDisplayPosition, CHRONOMATRON_NEXT_TO_NEXT + 0XBE000000);
                                 }
                             } else if (glass.getDisplayName().equals(chronomatronPattern.get(chronomatronMouseClicks))) {
                                 Utils.drawOnSlot(chestSize, glassSlot.xDisplayPosition, glassSlot.yDisplayPosition, CHRONOMATRON_NEXT + 0xE5000000);

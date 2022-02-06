@@ -20,7 +20,6 @@ public class UltrasequencerSolver {
     static Slot[] clickInOrderSlots = new Slot[36];
     static int lastUltraSequencerClicked = 0;
     public static int ULTRASEQUENCER_NEXT;
-    public static int ULTRASEQUENCER_NEXT_TO_NEXT;
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
@@ -67,12 +66,6 @@ public class UltrasequencerSolver {
                     if (clickInOrderSlots[lastUltraSequencerClicked] != null) {
                         Slot nextSlot = clickInOrderSlots[lastUltraSequencerClicked];
                         Utils.drawOnSlot(event.chestSize, nextSlot.xDisplayPosition, nextSlot.yDisplayPosition, ULTRASEQUENCER_NEXT + 0xE5000000);
-                    }
-                    if (lastUltraSequencerClicked + 1 < clickInOrderSlots.length) {
-                        if (clickInOrderSlots[lastUltraSequencerClicked + 1] != null) {
-                            Slot nextSlot = clickInOrderSlots[lastUltraSequencerClicked + 1];
-                            Utils.drawOnSlot(event.chestSize, nextSlot.xDisplayPosition, nextSlot.yDisplayPosition, ULTRASEQUENCER_NEXT_TO_NEXT + 0xD7000000);
-                        }
                     }
                 }
             }

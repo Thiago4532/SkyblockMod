@@ -25,7 +25,6 @@ public class ClickInOrderSolver {
     static Slot[] clickInOrderSlots = new Slot[36];
     static int[] terminalNumberNeeded = new int[4];
     public static int CLICK_IN_ORDER_NEXT;
-    public static int CLICK_IN_ORDER_NEXT_TO_NEXT;
 
     @SubscribeEvent(priority = EventPriority.LOW)
     public void onTooltipLow(ItemTooltipEvent event) {
@@ -92,10 +91,6 @@ public class ClickInOrderSolver {
             List<Slot> invSlots = event.slots;
             Slot slot = invSlots.get(terminalNumberNeeded[1]);
             Utils.drawOnSlot(chestSize, slot.xDisplayPosition, slot.yDisplayPosition, CLICK_IN_ORDER_NEXT + 0xFF000000);
-            Slot nextSlot = invSlots.get(terminalNumberNeeded[3]);
-            if (nextSlot != slot && nextSlot.getSlotIndex() != 0) {
-                Utils.drawOnSlot(chestSize, nextSlot.xDisplayPosition, nextSlot.yDisplayPosition, CLICK_IN_ORDER_NEXT_TO_NEXT + 0xFF000000);
-            }
         }
     }
 
